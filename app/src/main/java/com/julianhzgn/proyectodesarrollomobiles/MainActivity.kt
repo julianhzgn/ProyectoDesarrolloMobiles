@@ -1,6 +1,7 @@
 package com.julianhzgn.proyectodesarrollomobiles
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -44,16 +45,22 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId){
-            R.id.nav_item_one -> Toast.makeText(this, "Descubrir", Toast.LENGTH_SHORT).show()
+            R.id.nav_item_one -> navigateToSearchView()
             R.id.nav_item_two -> Toast.makeText(this, "Recetas", Toast.LENGTH_SHORT).show()
             R.id.nav_item_three -> Toast.makeText(this, "Favoritos", Toast.LENGTH_SHORT).show()
             R.id.nav_item_four -> Toast.makeText(this, "Lista de la compra", Toast.LENGTH_SHORT).show()
+            R.id.nav_item_five -> Toast.makeText(this, "Descubrir", Toast.LENGTH_SHORT).show()
             R.id.nav_item_six -> Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show()
             R.id.nav_item_seven -> Toast.makeText(this, "Configuracion", Toast.LENGTH_SHORT).show()
         }
 
         drawer.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    private fun navigateToSearchView(){
+        val intent = Intent(this, SeachActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {

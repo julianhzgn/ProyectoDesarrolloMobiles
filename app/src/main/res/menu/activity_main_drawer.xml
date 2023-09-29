@@ -3,26 +3,29 @@
     <group>
         <item android:id="@+id/nav_item_one"
             android:icon="@drawable/abc_vector_test"
-            android:title="Descubrir"/>
+            android:title="@string/textItemOne"/>
         <item android:id="@+id/nav_item_two"
             android:icon="@drawable/abc_vector_test"
-            android:title="Recetas"/>
+            android:title="@string/textItemTwo"/>
         <item android:id="@+id/nav_item_three"
             android:icon="@drawable/abc_vector_test"
-            android:title="Favoritos"/>
+            android:title="@string/textItemThree"/>
         <item android:id="@+id/nav_item_four"
             android:icon="@drawable/abc_vector_test"
-            android:title="Lista de la compra"/>
+            android:title="@string/textItemFour"/>
+        <item android:id="@+id/nav_item_five"
+            android:icon="@drawable/abc_vector_test"
+            android:title="@string/textItemFive"/>
     </group>
 
-    <item android:title="Title 1">
+    <item android:title="@string/textItemTitle1">
         <menu>
             <item android:id="@+id/nav_item_six"
                 android:icon="@drawable/abc_vector_test"
-                android:title="Perfil"/>
+                android:title="@string/textItemSix"/>
             <item android:id="@+id/nav_item_seven"
                 android:icon="@drawable/abc_vector_test"
-                android:title="Configuracion"/>
+                android:title="@string/textItemSeven"/>
         </menu>
     </item>
 </menu>

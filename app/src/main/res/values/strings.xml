@@ -2,4 +2,20 @@
     <string name="app_name">ProyectoDesarrolloMobiles</string>
     <string name="navigation_drawer_open">Open</string>
     <string name="navigation_drawer_close">Close</string>
+
+    <string name="user_name">Julian</string>
+
+<!--    Menu Strings-->
+    <string name="textItemOne">Buscar</string>
+    <string name="textItemTwo">Recetas</string>
+    <string name="textItemThree">Favoritos</string>
+    <string name="textItemFour">Lista de la compra</string>
+    <string name="textItemFive">Descubrir</string>
+
+    <string name="textItemTitle1">…</string>
+    <string name="textItemSix">Perfil</string>
+    <string name="textItemSeven">Configuracion</string>
+
+<!--    cards Strings-->
+    <string name="cardString1">Imagen 1</string>
 </resources>
