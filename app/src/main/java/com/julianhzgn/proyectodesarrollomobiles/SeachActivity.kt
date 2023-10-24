@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.widget.SearchView
+import androidx.core.view.isVisible
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.julianhzgn.proyectodesarrollomobiles.databinding.ActivitySeachBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -15,6 +17,8 @@ class SeachActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySeachBinding
     private lateinit var retrofit: Retrofit
+
+    private lateinit var adapter: RecipeAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,22 +39,32 @@ class SeachActivity : AppCompatActivity() {
 
         }
         )
+        adapter = RecipeAdapter()
+        binding.rvRecipe.setHasFixedSize(true)
+        binding.rvRecipe.layoutManager = LinearLayoutManager(this)
+        binding.rvRecipe.adapter = adapter
     }
 
     private fun searchByName(query: String) {
         val apiKey = "e71fb43c3d0a4578845ec750cd79bcce"
-
+        binding.progressBar.isVisible = true
         CoroutineScope(Dispatchers.IO).launch {
             val myResponse = retrofit.create(ApiService::class.java).getFood(query, apiKey)
             if (myResponse.isSuccessful) {
                 Log.i("Julian", "SI funciona")
+                val response: IngredientDataResponse? = myResponse.body()
+                if (response != null) {
+                    Log.i("Julian", response.toString())
+                    runOnUiThread {
+                        adapter.updateList(response.results)
+                        binding.progressBar.isVisible = false
+                    }
+                }
             } else {
                 Log.i("Julian", "NO funciona")
             }
         }
     }
-
-
 
 
     private fun getRetrofit(): Retrofit {
