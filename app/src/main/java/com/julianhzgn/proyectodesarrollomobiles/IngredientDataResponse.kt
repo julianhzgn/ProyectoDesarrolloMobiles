@@ -8,8 +8,8 @@ data class IngredientDataResponse(
 )
 
 data class RecipeItemResponse(
-    @SerializedName("id") val recipeId: Int,
+    @SerializedName("id") val recipeId: String,
     @SerializedName("title") val recipeTitle: String,
-    @SerializedName("image") val recipeImage: String,
+    @SerializedName("image") val recipeImageURL: String,
     @SerializedName("imageType") val recipeImageType: String
 )

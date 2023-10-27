@@ -4,10 +4,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class RecipeAdapter(var RecipeList: List<RecipeItemResponse> = emptyList()) :
+class RecipeAdapter(
+    var RecipeList: List<RecipeItemResponse> = emptyList(),
+    private val onItemSelected: (String) -> Unit
+) :
     RecyclerView.Adapter<RecipeViewHolder>() {
 
-    fun updateList(recipeList: List<RecipeItemResponse>){
+    fun updateList(recipeList: List<RecipeItemResponse>) {
         this.RecipeList = recipeList
         notifyDataSetChanged()
     }
@@ -19,7 +22,7 @@ class RecipeAdapter(var RecipeList: List<RecipeItemResponse> = emptyList()) :
     }
 
     override fun onBindViewHolder(viewholder: RecipeViewHolder, position: Int) {
-        viewholder.bind(RecipeList[position])
+        viewholder.bind(RecipeList[position], onItemSelected)
     }
 
     override fun getItemCount() = RecipeList.size

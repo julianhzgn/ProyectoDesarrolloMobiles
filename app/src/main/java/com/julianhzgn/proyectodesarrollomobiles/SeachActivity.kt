@@ -1,11 +1,13 @@
 package com.julianhzgn.proyectodesarrollomobiles
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.julianhzgn.proyectodesarrollomobiles.DetailRecipeActivity.Companion.EXTRA_ID
 import com.julianhzgn.proyectodesarrollomobiles.databinding.ActivitySeachBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -17,7 +19,6 @@ class SeachActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySeachBinding
     private lateinit var retrofit: Retrofit
-
     private lateinit var adapter: RecipeAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +40,7 @@ class SeachActivity : AppCompatActivity() {
 
         }
         )
-        adapter = RecipeAdapter()
+        adapter = RecipeAdapter { RecipeId -> navigateToDetail(RecipeId) }
         binding.rvRecipe.setHasFixedSize(true)
         binding.rvRecipe.layoutManager = LinearLayoutManager(this)
         binding.rvRecipe.adapter = adapter
@@ -66,10 +67,15 @@ class SeachActivity : AppCompatActivity() {
         }
     }
 
-
     private fun getRetrofit(): Retrofit {
         return Retrofit.Builder().baseUrl("https://api.spoonacular.com/")
             .addConverterFactory(GsonConverterFactory.create()).build()
+    }
+
+    private fun navigateToDetail(id: String) {
+        val intent = Intent(this, DetailRecipeActivity::class.java)
+        intent.putExtra(EXTRA_ID, id)
+        startActivity(intent)
     }
 
 }

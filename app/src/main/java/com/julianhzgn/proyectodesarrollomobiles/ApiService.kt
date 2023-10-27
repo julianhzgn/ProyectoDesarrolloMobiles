@@ -2,13 +2,9 @@ package com.julianhzgn.proyectodesarrollomobiles
 
 import retrofit2.Response
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
+import retrofit2.http.Url
 
-//interface ApiService {
-
-//    @GET("/recipes/complexSearch?query={ingredient}&apiKey=e71fb43c3d0a4578845ec750cd79bcce")
-//    suspend fun getFood(@Path("ingredient") ingredientName: String): Response<IngredientDataResponse>
 interface ApiService {
 
     @GET("/recipes/complexSearch")
@@ -16,4 +12,8 @@ interface ApiService {
         @Query("query") ingredientName: String,
         @Query("apiKey") apiKey: String
     ): Response<IngredientDataResponse>
+
+    @GET
+    suspend fun getRecipeDetail(@Url url: String): Response<RecipeDetailResponse>
+
 }
