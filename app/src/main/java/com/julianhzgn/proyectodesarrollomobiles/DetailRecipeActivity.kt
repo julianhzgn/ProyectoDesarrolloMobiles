@@ -44,6 +44,7 @@ class DetailRecipeActivity : AppCompatActivity() {
 
     private fun createUI(Recipe: RecipeDetailResponse) {
         Picasso.get().load(Recipe.image).into(binding.ivRecipeDetail)
+        binding.tvRecipeDetailName.text = Recipe.title
     }
 
     private fun getRetrofit(): Retrofit {

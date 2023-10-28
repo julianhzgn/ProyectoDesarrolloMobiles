@@ -1,16 +1,16 @@
 <resources>
-    <string name="app_name">ProyectoDesarrolloMobiles</string>
+    <string name="app_name">CookMaster</string>
     <string name="navigation_drawer_open">Open</string>
     <string name="navigation_drawer_close">Close</string>
 
     <string name="user_name">Julian</string>
 
     <!--    Menu Strings-->
-    <string name="textItemOne">Buscar</string>
+    <string name="textItemOne">Descubrir</string>
     <string name="textItemTwo">Recetas</string>
     <string name="textItemThree">Favoritos</string>
     <string name="textItemFour">Lista de la compra</string>
-    <string name="textItemFive">Descubrir</string>
+    <string name="textItemFive">…</string>
 
     <string name="textItemTitle1">…</string>
     <string name="textItemSix">Perfil</string>

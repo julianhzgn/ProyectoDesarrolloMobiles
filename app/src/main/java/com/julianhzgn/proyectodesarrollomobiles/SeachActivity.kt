@@ -9,6 +9,7 @@ import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.julianhzgn.proyectodesarrollomobiles.DetailRecipeActivity.Companion.EXTRA_ID
 import com.julianhzgn.proyectodesarrollomobiles.databinding.ActivitySeachBinding
+import com.squareup.picasso.Picasso
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
