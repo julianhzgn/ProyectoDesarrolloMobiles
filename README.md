@@ -7,3 +7,9 @@ Se realizo un cambio de repositorio debido a que el anterior se vio corrupto des
 Muchas gracias
 
 URL del anterior repo: [Repositorio](https://github.com/julianhzgn/Proyecto-Construccion-Moviles)
+
+## Cambios importantes:
+* Enlace a la web donde se diseño el Mockup: [WireframePro](https://wireframepro.mockflow.com/view/MIw0ioqj9pb)
+* Se diseño un panel para Descubrir nuevas recetas con un buscardor que recupera informarción desde una API.
+* Se agrego una vista de la receta.
+* Se agrego Icono de aplicación y nombre de app
