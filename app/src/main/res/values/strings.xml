@@ -18,4 +18,7 @@
 
     <!--    cards Strings-->
     <string name="cardString1">Imagen 1</string>
+
+    <!--    Descriptions Strings-->
+    <string name="cdrecipedetail">Imagen detalle de la receta</string>
 </resources>

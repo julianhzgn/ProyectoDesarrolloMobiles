@@ -28,7 +28,7 @@ class DetailRecipeActivity : AppCompatActivity() {
         getRecipeInformation(id)
     }
 
-        private fun getRecipeInformation(id: String) {
+    private fun getRecipeInformation(id: String) {
         CoroutineScope(Dispatchers.IO).launch {
             val RecipeDetail = getRetrofit().create(ApiService::class.java)
                 .getRecipeDetail(url = "$id/information?includeNutrition=false&apiKey=e71fb43c3d0a4578845ec750cd79bcce")
@@ -45,6 +45,7 @@ class DetailRecipeActivity : AppCompatActivity() {
     private fun createUI(Recipe: RecipeDetailResponse) {
         Picasso.get().load(Recipe.image).into(binding.ivRecipeDetail)
         binding.tvRecipeDetailName.text = Recipe.title
+        binding.tvRecipeDetailInfo1.text = Recipe.summary
     }
 
     private fun getRetrofit(): Retrofit {
