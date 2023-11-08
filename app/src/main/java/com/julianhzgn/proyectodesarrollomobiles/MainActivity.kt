@@ -18,13 +18,18 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import com.julianhzgn.proyectodesarrollomobiles.R.*
+import com.julianhzgn.proyectodesarrollomobiles.databinding.ActivityDetailRecipeBinding
+import com.julianhzgn.proyectodesarrollomobiles.databinding.AppBarMainBinding
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var drawer: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(layout.activity_main)
         //Arranca la aplicacion
 

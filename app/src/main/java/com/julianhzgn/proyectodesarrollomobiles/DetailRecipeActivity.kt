@@ -1,8 +1,13 @@
 package com.julianhzgn.proyectodesarrollomobiles
 
-import androidx.appcompat.app.AppCompatActivity
+import android.R
+import android.R.attr.data
 import android.os.Bundle
+import android.text.Html
 import android.util.Log
+import android.view.View
+import android.webkit.WebView
+import androidx.appcompat.app.AppCompatActivity
 import com.julianhzgn.proyectodesarrollomobiles.databinding.ActivityDetailRecipeBinding
 import com.squareup.picasso.Picasso
 import kotlinx.coroutines.CoroutineScope
@@ -10,6 +15,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+
 
 class DetailRecipeActivity : AppCompatActivity() {
 
@@ -45,7 +51,8 @@ class DetailRecipeActivity : AppCompatActivity() {
     private fun createUI(Recipe: RecipeDetailResponse) {
         Picasso.get().load(Recipe.image).into(binding.ivRecipeDetail)
         binding.tvRecipeDetailName.text = Recipe.title
-        binding.tvRecipeDetailInfo1.text = Recipe.summary
+        binding.tvRecipeDetailInfo1.text = Html.fromHtml(Recipe.summary)
+        binding.tvRecipeDetailInfo3.text = Recipe.readyInMinutes
     }
 
     private fun getRetrofit(): Retrofit {

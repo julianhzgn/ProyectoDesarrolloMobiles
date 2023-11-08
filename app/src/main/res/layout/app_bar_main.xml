@@ -15,7 +15,7 @@
             android:id="@+id/toolbar_main"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="#6336b1"
             app:layout_scrollFlags="scroll|enterAlways"/>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -24,134 +24,51 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingHorizontal="24dp"
-        android:paddingTop="85dp">
+        android:paddingTop="85dp"
+        android:background="#56c38f">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_1"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_marginEnd="16dp"
-            app:cardBackgroundColor="@color/cardview_dark_background"
-            app:cardCornerRadius="24dp"
-            app:layout_constraintEnd_toStartOf="@+id/card_2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cardString1"
-                    android:textColor="@color/white"
-                    />
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_2"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            app:cardBackgroundColor="@color/black"
-            app:cardCornerRadius="24dp"
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/card_1"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-
-                <ImageView
-                    android:id="@+id/ivRecipeItem2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"/>
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_gravity="bottom"
-                    android:background="@color/recipe_item_name"
-                    >
-
-                    <TextView
-                        android:id="@+id/imageViewTest"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:layout_gravity="center"
-                        android:textColor="@color/white"
-                        tools:text="Hola"
-
-                        />
-
-                </FrameLayout>
-
-            </FrameLayout>
-
-
-
-        </androidx.cardview.widget.CardView>
-
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_3"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            app:cardBackgroundColor="@color/cardview_dark_background"
-            app:cardCornerRadius="24dp"
-            app:layout_constraintEnd_toStartOf="@+id/card_4"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/card_1">
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Bienvenido a "
+            android:textSize="50dp"/>
 
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_4"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="24dp"
-            app:cardBackgroundColor="@color/black"
-            app:cardCornerRadius="24dp"
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/card_3"
-            app:layout_constraintTop_toBottomOf="@+id/card_2" />
-
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_5"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            app:cardBackgroundColor="@color/cardview_dark_background"
-            app:cardCornerRadius="24dp"
-            app:layout_constraintEnd_toStartOf="@+id/card_6"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/card_3">
+            app:layout_constraintTop_toBottomOf="@+id/text1"
+            android:text="@string/app_name"
+            android:textSize="64dp"
+            android:textStyle="bold|italic"/>
 
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_6"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="24dp"
-            app:cardBackgroundColor="@color/black"
-            app:cardCornerRadius="24dp"
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/card_5"
-            app:layout_constraintTop_toBottomOf="@+id/card_4" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text2"
+            android:background="@drawable/background"/>
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv1"
+            android:text="Aplicación de cocina creada y diseñada por: Julián Hernández"
+            android:textSize="30dp"
+            android:gravity="center"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
