@@ -59,12 +59,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (item.itemId) {
             R.id.nav_item_one -> navigateToSearchView()
             R.id.nav_item_two -> Toast.makeText(this, "Recetas", Toast.LENGTH_SHORT).show()
-            R.id.nav_item_three -> Toast.makeText(this, "Favoritos", Toast.LENGTH_SHORT).show()
+            R.id.nav_item_three -> navigateToFavoritesView()
             R.id.nav_item_four -> Toast.makeText(this, "Lista de la compra", Toast.LENGTH_SHORT)
                 .show()
-
-            R.id.nav_item_five -> Toast.makeText(this, "Descubrir", Toast.LENGTH_SHORT).show()
-            R.id.nav_item_six -> Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show()
+            R.id.nav_item_six -> navigateToProfileView()
             R.id.nav_item_seven -> Toast.makeText(this, "Configuracion", Toast.LENGTH_SHORT).show()
         }
 
@@ -74,6 +72,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun navigateToSearchView() {
         val intent = Intent(this, SeachActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToFavoritesView() {
+        val intent = Intent(this, FavoritesActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun navigateToProfileView() {
+        val intent = Intent(this, ProfileActivity::class.java)
         startActivity(intent)
     }
 
