@@ -59,7 +59,7 @@
                     android:layout_gravity="center"
                     android:textColor="@color/white"
                     android:textSize="20sp"
-                    tools:text="Pasta with Garlic" />
+                    android:text="Pasta with Garlic" />
 
             </FrameLayout>
 
@@ -101,7 +101,7 @@
                     android:layout_gravity="center"
                     android:textColor="@color/white"
                     android:textSize="20sp"
-                    tools:text="Rice Pudding" />
+                    android:text="Rice Pudding" />
 
             </FrameLayout>
 
