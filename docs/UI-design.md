@@ -4,7 +4,7 @@
 
 En la siguiente URL encontrará el Mockup funcional:
 
-   ![Mockup](https://marvelapp.com/prototype/19c6j73e/screen/91707407)
+   [Mockup](https://marvelapp.com/prototype/19c6j73e/screen/91707407)
 
 La interfaz de usuario de la aplicación CookMaster esta inspirada en la mayoria de interfaces diseñadas y optimizadas para este tipo de aplicaciones.
 Se diseñara una interfaz sencilla y practica que vaya directo al objetivo de la aplicación: Enseñar a cocinar recetas.
