@@ -9,7 +9,10 @@ Muchas gracias
 URL del anterior repo: [Repositorio](https://github.com/julianhzgn/Proyecto-Construccion-Moviles)
 
 ## Cambios importantes:
-* Enlace a la web donde se diseño el Mockup: [WireframePro](https://wireframepro.mockflow.com/view/MIw0ioqj9pb)
+* Enlace a la web donde se diseño el Mockup: [Mockup](https://marvelapp.com/prototype/19c6j73e/screen/91707407)
 * Se diseño un panel para Descubrir nuevas recetas con un buscardor que recupera informarción desde una API.
 * Se agrego una vista de la receta.
 * Se agrego Icono de aplicación y nombre de app
+* Se agrega panel de Favoritos
+* Se agrega panel de Perfil de usuario
+* Se modifican los Mockups
