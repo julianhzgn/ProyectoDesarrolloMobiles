@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="#6336b1"
+            app:titleTextColor="@color/white"
             app:layout_scrollFlags="scroll|enterAlways"/>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -25,7 +26,7 @@
         android:layout_height="match_parent"
         android:paddingHorizontal="24dp"
         android:paddingTop="85dp"
-        android:background="#56c38f">
+        android:background="#B8FFDD">
 
         <TextView
             android:id="@+id/text1"

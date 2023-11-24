@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailRecipeActivity">
+    tools:context=".DetailRecipeActivity"
+    android:background="#B8FFDD">
 
     <ImageView
         android:id="@+id/ivRecipeDetail"
@@ -14,14 +15,15 @@
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#B8FFDD"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="220dp"
         android:elevation="8dp"
-        app:cardBackgroundColor="#888"
+        app:cardBackgroundColor="#47C88A"
         app:cardCornerRadius="42dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,6 +37,7 @@
 
             <TextView
                 android:id="@+id/tvRecipeDetailName"
+                android:paddingVertical="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
